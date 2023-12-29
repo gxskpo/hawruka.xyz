@@ -1,7 +1,5 @@
 "use client";
 import styles from './Home.module.css';
-import {useRouter} from "next/navigation";
-import ReactTooltip from "react-tooltip";
 import ProfileRow from "@/app/components/profileRow";
 import ProjectElement from "@/app/components/projectElem";
 
@@ -26,22 +24,6 @@ export default function Home() {
         const target = urls[name] ?? "https://x.com/gxskpo";
         window.open(target, "_blank", "noopener noreferrer");
     }
-
-    const goProject = (name: string) => {
-        const urls: { [key: string]: any } = {
-            "sunburst_bot": "https://beta.fembot.online",
-            "sunburst_web": "https://github.com/gxskpo/sunburst",
-            "hayami_bot": "https://github.com/gxskpo/hayami",
-            // "galactiko_api": "https://galactiko.net/api"
-        }
-        const target = urls[name];
-        if (target) {
-            window.open(target, "_blank", "noopener noreferrer");
-        } else {
-            alert("Url del proyecto no encontrada :c")
-        }
-    }
-
 
     return (
         <div className={styles.indexLayout}>
