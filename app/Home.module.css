@@ -200,7 +200,7 @@
 }
 
 .projectsContainer .projectsTitle {
-    @apply text-2xl font-semibold text-gray-700 self-start self-center;
+    @apply text-2xl font-semibold text-gray-700 self-start;
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--black);
@@ -226,7 +226,7 @@
     margin-left: 1.5vw;
 }
 
-.projects > a{
+.projects > a {
     background-color: var(--grey);
     color: var(--black);
     border-radius: 10px;
@@ -341,7 +341,7 @@
         z-index: 1;
     }
 
-    .projects > .project {
+    .projects > a {
         box-shadow: none;
         margin: auto; /* Centers the item within its container */
         width: 88%;
@@ -350,7 +350,7 @@
         min-height: 1rem;
     }
 
-    .projects > .project:last-of-type {
+    .projects > a:last-of-type {
         margin-bottom: 1.5vw;
         height: 27vh;
     }

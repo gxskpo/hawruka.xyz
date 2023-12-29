@@ -1,7 +1,7 @@
 import {ReactNode} from "react";
 import styles from "@/app/Home.module.css";
 
-interface IconDict{
+interface IconDict {
     className: string, // Example: fa-discord, python-plain, fa-github
 }
 
@@ -15,10 +15,11 @@ interface Props {
 }
 
 
-export default function ProjectElement (props: Props): ReactNode {
+export default function ProjectElement(props: Props): ReactNode {
     const openSourceIcon = () => {
         if (props.openSource) {
-            return <i className={`fas fa-code-fork ${styles.openSourceBadge}`} style={{color: "#e89b0f"}}/>
+            return <i className={`fas fa-code-fork ${styles.openSourceBadge}`} style={{color: "#e89b0f"}}
+                      id={styles.profileIcon}/>
         }
     }
 
@@ -27,7 +28,7 @@ export default function ProjectElement (props: Props): ReactNode {
         const icon = props.useIcons[i];
         const className = icon.className;
         iconsList.push(
-            <i className={className} style={{color: "#fff"}}></i>
+            <i className={className} style={{color: "#fff"}} id={styles.profileIcon}/>
         )
     }
 

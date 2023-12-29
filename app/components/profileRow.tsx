@@ -1,10 +1,11 @@
 import styles from '../Home.module.css';
 import {ReactNode} from "react";
 
-interface IconDict{
+interface IconDict {
     name: string,
     color: string
 }
+
 interface Props {
     description: string;
     icons: IconDict[];
@@ -18,7 +19,7 @@ export default function ProfileRow(props: Props) {
         const name = icon.name;
         const color = icon.color;
         iconsList.push(
-            <i className={`devicon-${name}-plain`} style={{color: color}}></i>
+            <i className={`devicon-${name}-plain`} style={{color: color}}/>
         )
     }
 
