@@ -10,7 +10,19 @@ I'm also using [Vercel](https://vercel.com) to deploy it.
 
 ## License
 
-This repository is licensed a [Custom License](LICENSE.md)
+This repository is licensed under a [Custom License](LICENSE.md)
+
+### Usage Guidelines
+- **Non-Commercial Usage:** You can use, modify, and distribute the software freely for non-commercial purposes.
+- **Commercial Usage:** To use the software for commercial purposes, you need to acquire a commercial license from the Licensor.
+
+### Redistribution
+The Software should be redistributed including this License notice, ensuring derivative works are under the same license.
+
+### Warranty & Liability
+The software is provided "as is" without warranty. Furthermore, except in cases of gross negligence or willful misconduct, the Licensor isn't liable for damages or losses.
+
+### **Some assets may be licensed under a different license*
 
 ## Contributing
 
