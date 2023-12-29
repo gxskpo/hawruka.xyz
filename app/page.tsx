@@ -12,8 +12,6 @@ export default function Home() {
             "discord": "https://discord.gg/NZCeaKzwaY",
             "instagram": "https://instagram.com/hawrukadev"
         }
-        // check if user clicked with middle mouse button or left mouse button
-
 
         if (name === "discord") {
             const confirm: boolean = window.confirm("Este link te llevará a mi servidor de discord, ¿estás seguro?");
@@ -77,7 +75,7 @@ export default function Home() {
                                         {className: "fab fa-discord"},
                                         {className: "devicon-python-plain"}
                                     ]} openSource={false}/>
-                    <ProjectElement url="https://github.com/gsxkpo/sunburst" imageUrl="/sunburst-next.png"
+                    <ProjectElement url="https://github.com/gxskpo/sunburst" imageUrl="/sunburst-next.png"
                                     projectName="SunBurst (webpage)" description="Página web de SunBurst"
                                     useIcons={[
                                         {className: "devicon-nodejs-plain"},
