@@ -23,8 +23,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
             <meta property="og:description" content={metadata.description}/>
             <meta property="og:type" content="website"/>
             <meta property="og:url" content="https://harukadev.xyz"/>
-            <meta property="og:image" content="/og-image.png"/>
-            <meta name="twitter:card" content="summary_large_image"/>
+            <meta property="og:image" content="/pfp.png"/>
             <script src={"https://kit.fontawesome.com/8e4c18f6c2.js"} crossOrigin="anonymous"/>
             <link rel="stylesheet" href={"https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"}/>
         </head>
