@@ -1,6 +1,9 @@
 "use client";
 import styles from './Home.module.css';
 import {useRouter} from "next/navigation";
+import ReactTooltip from "react-tooltip";
+import ProfileRow from "@/app/components/profileRow";
+import ProjectElement from "@/app/components/projectElem";
 
 
 export default function Home() {
@@ -11,6 +14,15 @@ export default function Home() {
             "discord": "https://discord.gg/NZCeaKzwaY",
             "instagram": "https://instagram.com/hawrukadev"
         }
+        // check if user clicked with middle mouse button or left mouse button
+
+
+        if (name === "discord") {
+            const confirm: boolean = window.confirm("Este link te llevará a mi servidor de discord, ¿estás seguro?");
+            if (!confirm) return;
+        }
+
+
         const target = urls[name] ?? "https://x.com/gxskpo";
         window.open(target, "_blank", "noopener noreferrer");
     }
@@ -33,10 +45,6 @@ export default function Home() {
 
     return (
         <div className={styles.indexLayout}>
-            <div style={{display: "none"}}>
-                <a target="_blank" href="https://icons8.com/icon/Fycm8TUhWmFU/c-sharp-logo">C Sharp Logo</a> icon by <a
-                target="_blank" href="https://icons8.com">Icons8</a>
-            </div>
             <div className={styles.profileContainer}>
                 <span className={styles.myDataContainer}>
                 <img
@@ -45,7 +53,7 @@ export default function Home() {
                     <h1>Haruka</h1>
                 </span>
                 <div className={styles.socialsContainer}>
-                    <p>Mis redes:</p>
+                    <p>Socials:</p>
                     <button onClick={() => goSocials('twitter')}>
                         <i className="fab fa-twitter"/>
                     </button>
@@ -59,67 +67,58 @@ export default function Home() {
                         <i className="fab fa-instagram"/>
                     </button>
                 </div>
-                <div className={styles.langsIUse}>
-                    <p>Lenguajes:</p>
-                    <div className={styles.langsIUseContainer}>
-                        <i className="devicon-javascript-plain" style={{color: "#f7df1e"}}></i>
-                        <i className="devicon-typescript-plain" style={{color: "#007acc"}}></i>
-                        <i className="devicon-python-plain" style={{color: "#4B8BBE"}}></i>
-                        <i className="devicon-csharp-plain" style={{color: "#239120"}}></i>
-                    </div>
-                </div>
+                <ProfileRow description="Languages:" icons={[
+                    {name: "javascript", color: "#f7df1e"},
+                    {name: "typescript", color: "#007acc"},
+                    {name: "python", color: "#4B8BBE"},
+                    {name: "csharp", color: "#239120"}
+                ]}/>
+                <ProfileRow description="Techs:" icons={[
+                    {name: "react", color: "#61dbfb"},
+                    {name: "nextjs", color: "#000000"},
+                    {name: "nodejs", color: "#339933"},
+                    {name: "dotnetcore", color: "#512bd4"}
+                ]}/>
+                <ProfileRow description="DBs:" icons={[
+                    {name: "sqlite", color: "#fff"},
+                    {name: "mysql", color: "#4DB33D"},
+                ]}/>
             </div>
             <div className={styles.projectsContainer}>
                 <div className={styles.projectsTitle}>
                     <h2>Mis proyectos ^^</h2>
                 </div>
                 <div className={styles.projects}>
-                    <div className={styles.project} onClick={() => goProject('sunburst_bot')}>
-                        <img src="/sunburst-icon.png" alt="Haruka"/>
-                        <div className={styles.projectData}>
-                            <h3>SunBurst</h3>
-                            <p>Bot de discord multifuncional</p>
-                        </div>
-                        <div className={styles.languages}>
-                            <i className="fab fa-discord"/>
-                            <i className="devicon-python-plain"></i>
-                        </div>
-                    </div>
-                    <div className={styles.project} onClick={() => goProject('sunburst_web')}>
-                        <img src="/sunburst-next.png" alt="Haruka"/>
-                        <div className={styles.projectData}>
-                            <h3>SunBurst (webpage)</h3>
-                            <p>Página web de SunBurst</p>
-                        </div>
-                        <div className={styles.languages}>
-                            <i className="devicon-nodejs-plain"></i>
-                            <i className="devicon-nextjs-original"></i>
-                            <i className="devicon-typescript-plain"></i>
-                            <i className="devicon-tailwindcss-plain"></i>
-                        </div>
-                    </div>
-                    <div className={styles.project} onClick={() => goProject('hayami_bot')}>
-                        <img src="/hayami-icon.png" alt="Haruka"/>
-                        <div className={styles.projectData}>
-                            <h3>Hayami bot</h3>
-                            <p>El bot de discord más inútil jamás creado</p>
-                        </div>
-                        <div className={styles.languages}>
-                            <i className="fab fa-discord"></i>
-                            <i className="devicon-python-plain"></i>
-                            <i className="devicon-sqlite-plain"></i>
-                        </div>
-                    </div>
-                    <div className={styles.project} onClick={() => goProject('galactiko_api')}>
-                        <img src="/api-iconm.jpeg" alt="Haruka"/>
-                        <div className={styles.projectData}>
-                            <h3>Galactiko API</h3>
-                            <p>API para bots de discord. ¡Próximamente!</p>
-                        </div>
-                        <div className={styles.languages}>
-                            <i className="devicon-csharp-plain"></i>
-                            <i className="devicon-dotnetcore-plain"></i>
-                        </div>
+                    <ProjectElement url="https://beta.fembot.online" imageUrl="/sunburst-icon.png"
+                                    projectName="SunBurst" description="Bot de discord multifuncional"
+                                    useIcons={[
+                                        {className: "fab fa-discord"},
+                                        {className: "devicon-python-plain"}
+                                    ]} openSource={false}/>
+                    <ProjectElement url="https://github.com/gsxkpo/sunburst" imageUrl="/sunburst-next.png"
+                                    projectName="SunBurst (webpage)" description="Página web de SunBurst"
+                                    useIcons={[
+                                        {className: "devicon-nodejs-plain"},
+                                        {className: "devicon-nextjs-original"},
+                                        {className: "devicon-typescript-plain"},
+                                        {className: "devicon-tailwindcss-plain"}
+                                    ]} openSource={true}/>
+                    <ProjectElement url="https://github.com/gxskpo/hayami" imageUrl="/hayami-icon.png"
+                                    projectName="Hayami Bot" description="El bot de discord más inútil jamás creado"
+                                    useIcons={[
+                                        {className: "fab fa-discord"},
+                                        {className: "devicon-python-plain"},
+                                        {className: "devicon-sqlite-plain"}
+                                    ]} openSource={true}/>
+                    <div style={{display: "none"}}>
+                        <ProjectElement url="https://galactiko.net/api" imageUrl="/api-iconm.jpeg"
+                                        projectName="Galactiko API"
+                                        description="API para bots de discord. ¡Próximamente!"
+                                        useIcons={[
+                                            {className: "devicon-csharp-plain"},
+                                            {className: "devicon-dotnetcore-plain"},
+                                            {className: "devicon-mysql-plain"}
+                                        ]} openSource={false}/>
                     </div>
                 </div>
             </div>

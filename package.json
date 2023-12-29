@@ -12,7 +12,8 @@
     "next": "14.0.4",
     "oxlint": "^0.0.22",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-tooltip": "^5.25.1"
   },
   "devDependencies": {
     "typescript": "^5",

@@ -24,6 +24,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
             <meta property="og:type" content="website"/>
             <meta property="og:url" content="https://harukadev.xyz"/>
             <meta property="og:image" content="/pfp.png"/>
+            <link href={"https://fonts.googleapis.com/"} rel="preconnect"/>
             <script src={"https://kit.fontawesome.com/8e4c18f6c2.js"} crossOrigin="anonymous"/>
             <link rel="stylesheet" href={"https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"}/>
         </head>

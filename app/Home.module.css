@@ -8,6 +8,8 @@
     grid-template-columns: 1fr 3fr 1fr;
     top: 0;
     left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 
@@ -77,7 +79,7 @@
     height: auto;
 }
 
-.socialsContainer > p{
+.socialsContainer > p {
     margin: 0 10px;
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
@@ -92,8 +94,13 @@
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
     color: var(--black);
+    font-size: 1.5rem;
     box-shadow: var(--small-default-shadow);
     transition: box-shadow 0.2s ease-in-out;
+}
+
+.socialsContainer > button:last-of-type {
+    padding: 5px 12px 5px 12px;
 }
 
 .socialsContainer > button:hover {
@@ -101,7 +108,9 @@
     scale: 1.015;
 }
 
-.langsIUse{
+
+.profileDataRow {
+    /* align to left */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -119,14 +128,13 @@
     height: auto;
 }
 
-
-.langsIUse > .langsIUseContainer {
+.profileDataRow > .profileDRContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
 }
 
-.langsIUse > p{
+.profileDataRow > p {
     margin: 0 10px;
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
@@ -135,20 +143,42 @@
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.langsIUseContainer  > i {
+.profileDRContainer > i {
     margin: 2px 10px;
     background-color: var(--white);
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
     color: var(--black);
+    font-size: 1.5rem;
     box-shadow: var(--small-default-shadow);
     transition: all 0.2s ease-in-out;
 }
 
-.langsIUseContainer  > i:hover {
+.profileDRContainer > i:hover {
     box-shadow: var(--default-shadow);
     scale: 1.03;
 }
+
+.aboutMeContainer {
+    @apply flex flex-col items-center justify-center bg-white rounded-lg p-4 shadow-sm;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: var(--small-default-shadow);
+    margin-right: auto; /* Align to the left */
+    margin-top: 1.5vw;
+    transition: all 0.2s ease-in-out;
+    margin-left: 3vw;
+    width: 94%;
+    height: auto;
+    margin-bottom: 1.5vw;
+}
+
+.aboutMeContainer:hover {
+    box-shadow: var(--sink-shadow);
+
+}
+
 
 .projectsContainer {
     grid-column: 2;
@@ -163,6 +193,10 @@
     padding: 20px;
     box-shadow: var(--small-default-shadow);
     transition: box-shadow 0.2s ease-in-out;
+}
+
+.projectsContainer:hover {
+    box-shadow: var(--sink-shadow);
 }
 
 .projectsContainer .projectsTitle {
@@ -192,7 +226,7 @@
     margin-left: 1.5vw;
 }
 
-.projects > .project {
+.projects > a{
     background-color: var(--grey);
     color: var(--black);
     border-radius: 10px;
@@ -203,7 +237,8 @@
     cursor: pointer;
 }
 
-.projects > .project:hover {
+
+.projects > a:hover {
     box-shadow: var(--default-shadow);
     scale: 1.01;
 }
@@ -240,6 +275,10 @@
     font-size: 1.1rem;
 }
 
+.openSourceBadge {
+    scale: 0.9;
+}
+
 .languages > i {
     margin-right: 5px;
 }
@@ -269,9 +308,13 @@
         box-shadow: none;
     }
 
-    .langsIUse {
+    .profileDataRow {
         margin-left: 0;
         box-shadow: none;
+    }
+
+    .profileDRContainer > i {
+        padding: 8px 5px 5px 8px;
     }
 
 
@@ -281,6 +324,7 @@
         width: 96%;
         margin-left: 2vw;
         max-height: 65%;
+        margin-bottom: 2vh;
     }
 
     .projects {
@@ -293,7 +337,7 @@
         margin-left: 1.5vw;
         justify-content: center; /* Centers items along the row axis */
         align-items: center; /* Centers items along the column axis */
-        box-shadow: 0 10px 10px -10px #fff;
+        box-shadow: 0 10px 10px -10px rgba(255, 255, 255, 0.44);
         z-index: 1;
     }
 

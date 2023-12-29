@@ -1,38 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root {
-  --montserrat: 'Montserrat', sans-serif;
-  --base-font: var(--montserrat);
-  --black: #ffffff;
-  --blue: #8faae8;;
-  --gold: #eab100; /* Color adaptado para que combine bien con el nuevo blue */
-  --pink: #ff86af;
-  --grey: #1a1a1a; /* Nuevo color de fondo para modo oscuro */
-  --white: #333333; /* Nuevo color para objetos en modo oscuro */
-  --default-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  --small-default-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.1);
-  --hover-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -8px -8px 18px rgba(255, 255, 255, 0.1);
-  --sink-shadow: 0px 0px 3px 0px #333333,
-  0px 0px 3px 0px #333333,
-  0px 0px 3px 0px #0001,
-  0px 0px 3px 0px #0001,
-  inset 0px 0px 6px 0px #333333,
-  inset 0px 0px 4px 0px #333333,
-  inset 0px 0px 6px 0px #0003,
-  inset 0px 0px 4px 0px #0001;
-  --text-shadow: 10px 10px 22px rgba(0, 0, 0, 0.4), -10px -10px 22px rgba(255, 255, 255, 0.2);
-  --profile-picture-size: 150px;
+    --montserrat: 'Montserrat', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+    --base-font: var(--poppins);
+    --black: #ffffff;
+    --blue: #8faae8;;
+    --gold: #eab100; /* Color adaptado para que combine bien con el nuevo blue */
+    --pink: #ff86af;
+    --grey: #1a1a1a; /* Nuevo color de fondo para modo oscuro */
+    --white: #333333; /* Nuevo color para objetos en modo oscuro */
+    --default-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    --small-default-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.1);
+    --hover-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -8px -8px 18px rgba(255, 255, 255, 0.1);
+    --sink-shadow: 0px 0px 3px 0px #333333,
+    0px 0px 3px 0px #333333,
+    0px 0px 3px 0px #0001,
+    0px 0px 3px 0px #0001,
+    inset 0px 0px 6px 0px #333333,
+    inset 0px 0px 4px 0px #333333,
+    inset 0px 0px 6px 0px #0003,
+    inset 0px 0px 4px 0px #0001;
+    --text-shadow: 10px 10px 22px rgba(0, 0, 0, 0.4), -10px -10px 22px rgba(255, 255, 255, 0.2);
+    --profile-picture-size: 150px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--base-font);
 }
 
 html {
-  overflow: scroll;
+    overflow: scroll;
 }
 
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  background: transparent; /* make scrollbar transparent */
+    width: 0;
+    height: 0;
+    background: transparent; /* make scrollbar transparent */
 }
