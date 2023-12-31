@@ -152,6 +152,7 @@
     font-size: 1.5rem;
     box-shadow: var(--small-default-shadow);
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .profileDRContainer > i:hover {

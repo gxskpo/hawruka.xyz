@@ -45,3 +45,69 @@ html {
     height: 0;
     background: transparent; /* make scrollbar transparent */
 }
+
+@keyframes  fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.generic-modal-container {
+    @apply flex-col items-center fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50;
+    display: none;
+}
+
+.generic-modal {
+    @apply flex flex-col items-center bg-white rounded-lg p-4 shadow-sm;
+    width: 30%;
+    height: auto;
+    margin-top: 10%;
+    padding: 20px;
+    background-color: var(--white);
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.generic-modal > .generic-modal-close {
+    @apply ml-auto;
+    color: var(--black);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.generic-modal > .generic-modal-close:hover {
+    color: var(--pink);
+}
+
+
+.generic-modal > .generic-modal-head {
+    @apply flex items-start;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.generic-modal-head > .generic-modal-title {
+    @apply inline;
+    color: var(--black);
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.generic-modal-head > .generic-modal-icon {
+    @apply inline;
+    color: var(--black);
+    margin-top: 0.2rem;
+    font-size: 3rem;
+    margin-right: 0.5rem;
+}
+
+
+.generic-modal > .generic-modal-content {
+    @apply self-start;
+    color: var(--black);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}

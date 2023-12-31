@@ -2,6 +2,7 @@
 import styles from './Home.module.css';
 import ProfileRow from "@/app/components/profileRow";
 import ProjectElement from "@/app/components/projectElem";
+import {showModal} from "@/app/components/genericModal";
 
 
 export default function Home() {
@@ -48,21 +49,28 @@ export default function Home() {
                     </button>
                 </div>
                 <ProfileRow description="Languages:" icons={[
-                    {name: "javascript", color: "#f7df1e"},
-                    {name: "typescript", color: "#007acc"},
-                    {name: "python", color: "#4B8BBE"},
-                    {name: "csharp", color: "#239120"}
-                ]}/>
+                    {name: "javascript", color: "#f7df1e", nick: "JavaScript"},
+                    {name: "typescript", color: "#007acc", nick: "TypeScript"},
+                    {name: "python", color: "#4B8BBE", nick: "Python"},
+                    {name: "csharp", color: "#239120", nick: "C#"},
+                ]} callback={(i) => {
+                    showModal(i.nick ?? i.name, '', `devicon-${i.name}-plain`);
+                }}
+                />
                 <ProfileRow description="Techs:" icons={[
-                    {name: "react", color: "#61dbfb"},
-                    {name: "nextjs", color: "#000000"},
-                    {name: "nodejs", color: "#339933"},
-                    {name: "dotnetcore", color: "#512bd4"}
-                ]}/>
+                    {name: "react", color: "#61dbfb", nick: "React"},
+                    {name: "nextjs", color: "#000000", nick: "Next.js"},
+                    {name: "nodejs", color: "#339933", nick: "Node.js"},
+                    {name: "dotnetcore", color: "#512bd4", nick: ".NET Core"},
+                ]} callback={(i) => {
+                    showModal(i.nick ?? i.name, '', `devicon-${i.name}-plain`);
+                }}/>
                 <ProfileRow description="DBs:" icons={[
-                    {name: "sqlite", color: "#fff"},
-                    {name: "mysql", color: "#4DB33D"},
-                ]}/>
+                    {name: "sqlite", color: "#fff", nick: "SQLite"},
+                    {name: "mysql", color: "#4DB33D", nick: "MySQL"},
+                ]} callback={(i) => {
+                    showModal(i.nick ?? i.name, '', `devicon-${i.name}-plain`);
+                }}/>
             </div>
             <div className={styles.projectsContainer}>
                 <div className={styles.projectsTitle}>

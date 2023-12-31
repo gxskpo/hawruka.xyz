@@ -2,7 +2,7 @@ import type {Metadata} from 'next'
 import React from 'react'
 import './globals.css'
 import {Analytics} from '@vercel/analytics/react';
-
+import {GenericModal} from "./components/genericModal";
 
 export const metadata: Metadata = {
     title: 'Harukadev.xyz',
@@ -30,6 +30,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
             <link rel="stylesheet" href={"https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"}/>
         </head>
         <body>
+        <GenericModal/>
         {children}
         <Analytics/>
         </body>
