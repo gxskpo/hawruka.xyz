@@ -91,7 +91,7 @@ export default function Home() {
                                         {className: "devicon-typescript-plain"},
                                         {className: "devicon-tailwindcss-plain"}
                                     ]} openSource={true}/>
-                    <ProjectElement url="https://github.com/gxskpo/hayami" imageUrl="/hayami-icon.png"
+                    <ProjectElement url="https://github.com/gxskpo/hayami" imageUrl="/hayami_icn_mini.png"
                                     projectName="Hayami Bot" description="El bot de discord más inútil jamás creado"
                                     useIcons={[
                                         {className: "fab fa-discord"},
@@ -99,7 +99,8 @@ export default function Home() {
                                         {className: "devicon-sqlite-plain"}
                                     ]} openSource={true}/>
                     <div style={{display: "none"}}>
-                        <ProjectElement url="https://galactiko.net/api" imageUrl="/api-iconm.jpeg"
+                        {/*
+                        <ProjectElement url="https://galactiko.net/api" imageUrl="/api_icn_mini.png"
                                         projectName="Galactiko API"
                                         description="API para bots de discord. ¡Próximamente!"
                                         useIcons={[
@@ -107,6 +108,7 @@ export default function Home() {
                                             {className: "devicon-dotnetcore-plain"},
                                             {className: "devicon-mysql-plain"}
                                         ]} openSource={false}/>
+                         */}
                     </div>
                 </div>
             </div>
