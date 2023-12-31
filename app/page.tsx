@@ -71,6 +71,11 @@ export default function Home() {
                 ]} callback={(i) => {
                     showModal(i.nick ?? i.name, '', `devicon-${i.name}-plain`);
                 }}/>
+                <ProfileRow description="View website source:" icons={[
+                    {name: "github", color: "#fff", nick: "GitHub"},
+                ]} callback={() => {
+                    window.open("https://github.com/gxskpo/myWeb", "_blank", "noopener noreferrer");
+                }}/>
             </div>
             <div className={styles.projectsContainer}>
                 <div className={styles.projectsTitle}>
