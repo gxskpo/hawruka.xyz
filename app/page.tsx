@@ -79,17 +79,17 @@ export default function Home() {
             </div>
             <div className={styles.projectsContainer}>
                 <div className={styles.projectsTitle}>
-                    <h2>Mis proyectos ^^</h2>
+                    <h2>My projects ^^</h2>
                 </div>
                 <div className={styles.projects}>
                     <ProjectElement url="https://beta.fembot.online" imageUrl="/sunburst-icon.png"
-                                    projectName="SunBurst" description="Bot de discord multifuncional"
+                                    projectName="SunBurst" description="Multi-purpose discord bot"
                                     useIcons={[
                                         {className: "fab fa-discord"},
                                         {className: "devicon-python-plain"}
                                     ]} openSource={false}/>
                     <ProjectElement url="https://github.com/gxskpo/sunburst" imageUrl="/sunburst-next.png"
-                                    projectName="SunBurst (webpage)" description="Página web de SunBurst"
+                                    projectName="SunBurst (webpage)" description="SunBurst's webpage"
                                     useIcons={[
                                         {className: "devicon-nodejs-plain"},
                                         {className: "devicon-nextjs-original"},
@@ -97,7 +97,7 @@ export default function Home() {
                                         {className: "devicon-tailwindcss-plain"}
                                     ]} openSource={true}/>
                     <ProjectElement url="https://github.com/gxskpo/hayami" imageUrl="/hayami_icn_mini.png"
-                                    projectName="Hayami Bot" description="El bot de discord más inútil jamás creado"
+                                    projectName="Hayami Bot" description="The useless discord bot"
                                     useIcons={[
                                         {className: "fab fa-discord"},
                                         {className: "devicon-python-plain"},
