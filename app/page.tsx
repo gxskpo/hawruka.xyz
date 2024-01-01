@@ -103,18 +103,15 @@ export default function Home() {
                                         {className: "devicon-python-plain"},
                                         {className: "devicon-sqlite-plain"}
                                     ]} openSource={true}/>
-                    <div style={{display: "none"}}>
-                        {/*
-                        <ProjectElement url="https://galactiko.net/api" imageUrl="/api_icn_mini.png"
-                                        projectName="Galactiko API"
-                                        description="API para bots de discord. ¡Próximamente!"
-                                        useIcons={[
-                                            {className: "devicon-csharp-plain"},
-                                            {className: "devicon-dotnetcore-plain"},
-                                            {className: "devicon-mysql-plain"}
-                                        ]} openSource={false}/>
-                         */}
-                    </div>
+
+                    <ProjectElement url="https://github.com/gxskpo/journal" imageUrl="/absdDefACL.png"
+                                    projectName="Journal"
+                                    description="Encrypted journal made with flask"
+                                    useIcons={[
+                                        {className: "devicon-python-plain"},
+                                        {className: "devicon-flask-original"},
+                                        {className: "devicon-sqlite-plain"}
+                                    ]} openSource={true}/>
                 </div>
             </div>
         </div>
