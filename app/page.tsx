@@ -4,31 +4,8 @@ import ProfileRow from "@/app/components/profileRow";
 import ProjectElement from "@/app/components/projectElem";
 import {showModal} from "@/app/components/genericModal";
 import SocialButton from "@/app/components/socialButton";
-import {useRouter} from "next/navigation";
 
 export default function Home() {
-    const router = useRouter();
-    const goSocials = (name: string): void => {
-        const urls: { [key: string]: string } = {
-            "twitter": "https://x.com/gxskpo",
-            "github": "https://github.com/gxskpo",
-            "discord": "https://discord.gg/NZCeaKzwaY",
-            "instagram": "https://instagram.com/hawrukadev"
-        }
-
-        if (name === "discord") {
-            const confirm: boolean = window.confirm("Este link te llevará a mi servidor de discord, ¿estás seguro?");
-            if (!confirm) return;
-        }
-
-        if (name === "donate") {
-            return router.push("/donate");
-        }
-
-
-        const target = urls[name] ?? "https://x.com/gxskpo";
-        window.open(target, "_blank", "noopener noreferrer");
-    }
 
     return (
         <div className={styles.indexLayout}>
@@ -41,11 +18,11 @@ export default function Home() {
                 </span>
                 <div className={styles.socialsContainer}>
                     <p>Socials:</p>
-                    <SocialButton icon={"fab fa-twitter"} name={"twitter"} callback={goSocials}/>
-                    <SocialButton icon={"fab fa-github"} name={"github"} callback={goSocials}/>
-                    <SocialButton icon={"fab fa-discord"} name={"discord"} callback={goSocials}/>
-                    <SocialButton icon={"fab fa-instagram"} name={"instagram"} callback={goSocials}/>
-                    <SocialButton name="donate" icon="fas fa-donate" callback={goSocials}/>
+                    <SocialButton icon={"fab fa-twitter"} url={"https://twitter.com/gxskpo"}/>
+                    <SocialButton icon={"fab fa-github"} url={"https://github.com/gxskpo"}/>
+                    <SocialButton icon={"fab fa-discord"} url={"https://discord.gg/NZCeaKzwaY"}/>
+                    <SocialButton icon={"fab fa-instagram"} url={"https://instagram.com/hawrukadev"}/>
+                    <SocialButton icon={"fas fa-donate"} url={"/donate"}/>
                 </div>
                 <ProfileRow description="Languages:" icons={[
                     {name: "javascript", color: "#f7df1e", nick: "JavaScript"},

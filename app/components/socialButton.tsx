@@ -1,21 +1,14 @@
 interface SocialButtonProps {
     icon: string;
-    name?: string;
-    callback?: (name: any) => void;
+    url?: string;
 }
 
-export default function SocialButton(props: SocialButtonProps){
+export default function SocialButton(props: SocialButtonProps) {
 
-    const handleClick = () => {
-        if (props.callback && props.name) {
-            return props.callback(props.name);
-        }
-        props.callback?.(props.name);
-    }
 
     return (
-        <button onClick={handleClick}>
+        <a href={props.url ?? "#"} target="_blank" rel="noopener noreferrer">
             <i className={props.icon}/>
-        </button>
+        </a>
     )
 }

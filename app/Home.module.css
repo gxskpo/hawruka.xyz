@@ -88,7 +88,7 @@
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.socialsContainer > button {
+.socialsContainer > a {
     margin: 0 10px;
     background-color: var(--grey);
     padding: 5px 10px 5px 10px;
@@ -99,11 +99,11 @@
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.socialsContainer > button:last-of-type {
+.socialsContainer > a:last-of-type {
     padding: 5px 12px 5px 12px;
 }
 
-.socialsContainer > button:hover {
+.socialsContainer > a:hover {
     box-shadow: var(--default-shadow);
     scale: 1.015;
 }
