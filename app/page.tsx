@@ -3,10 +3,12 @@ import styles from './Home.module.css';
 import ProfileRow from "@/app/components/profileRow";
 import ProjectElement from "@/app/components/projectElem";
 import {showModal} from "@/app/components/genericModal";
-
+import SocialButton from "@/app/components/socialButton";
+import {useRouter} from "next/navigation";
 
 export default function Home() {
-    const goSocials = (name: string) => {
+    const router = useRouter();
+    const goSocials = (name: string): void => {
         const urls: { [key: string]: string } = {
             "twitter": "https://x.com/gxskpo",
             "github": "https://github.com/gxskpo",
@@ -17,6 +19,10 @@ export default function Home() {
         if (name === "discord") {
             const confirm: boolean = window.confirm("Este link te llevará a mi servidor de discord, ¿estás seguro?");
             if (!confirm) return;
+        }
+
+        if (name === "donate") {
+            return router.push("/donate");
         }
 
 
@@ -35,18 +41,11 @@ export default function Home() {
                 </span>
                 <div className={styles.socialsContainer}>
                     <p>Socials:</p>
-                    <button onClick={() => goSocials('twitter')}>
-                        <i className="fab fa-twitter"/>
-                    </button>
-                    <button onClick={() => goSocials('github')}>
-                        <i className="fab fa-github"/>
-                    </button>
-                    <button onClick={() => goSocials('discord')}>
-                        <i className="fab fa-discord"/>
-                    </button>
-                    <button onClick={() => goSocials('instagram')}>
-                        <i className="fab fa-instagram"/>
-                    </button>
+                    <SocialButton icon={"fab fa-twitter"} name={"twitter"} callback={goSocials}/>
+                    <SocialButton icon={"fab fa-github"} name={"github"} callback={goSocials}/>
+                    <SocialButton icon={"fab fa-discord"} name={"discord"} callback={goSocials}/>
+                    <SocialButton icon={"fab fa-instagram"} name={"instagram"} callback={goSocials}/>
+                    <SocialButton name="donate" icon="fas fa-donate" callback={goSocials}/>
                 </div>
                 <ProfileRow description="Languages:" icons={[
                     {name: "javascript", color: "#f7df1e", nick: "JavaScript"},

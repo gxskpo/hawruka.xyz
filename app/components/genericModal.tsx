@@ -15,8 +15,21 @@ export function showModal(title: string, content?: string, icon?: any) {
     } else {
         iconElem.style.display = "none";
     }
-    modal.style.display = "flex";
+    modal.style.display = "flex"
+}
 
+export async function waitForModalClose  (title: string, content?: string, icon?: any): Promise<void> {
+    const modal: any = document.querySelector(".generic-modal-container");
+    if(!modal) return;
+    showModal(title, content, icon);
+    return new Promise((resolve, reject) => {
+        const interval = setInterval(() => {
+            if(modal.style.display === "none"){
+                clearInterval(interval);
+                resolve();
+            }
+        }, 100);
+    })
 }
 
 export function GenericModal() {
