@@ -47,11 +47,14 @@ export default function Home() {
                 ]} callback={(i) => {
                     showModal(i.nick ?? i.name, '', `devicon-${i.name}-plain`);
                 }}/>
-                <ProfileRow description="View website source:" icons={[
-                    {name: "github", color: "#fff", nick: "GitHub"},
-                ]} callback={() => {
-                    window.open("https://github.com/gxskpo/myWeb", "_blank", "noopener noreferrer");
-                }}/>
+                    <div className={styles.profileDataRow}>
+                        <p>Source code of this website:</p>
+                        <div className={styles.profileDRContainer}>
+                            <a href="https://github.com/gxskpo/myWeb" target="_blank" rel="noreferrer">
+                                <i className="fab fa-github" style={{color: "#fff"}}/>
+                            </a>
+                        </div>
+                    </div>
             </div>
             <div className={styles.projectsContainer}>
                 <div className={styles.projectsTitle}>

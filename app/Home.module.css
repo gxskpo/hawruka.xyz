@@ -143,6 +143,7 @@
     transition: box-shadow 0.2s ease-in-out;
 }
 
+.profileDRContainer > a > i,
 .profileDRContainer > i {
     margin: 2px 10px;
     background-color: var(--white);
@@ -154,7 +155,7 @@
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
-
+.profileDRContainer > a > i:hover,
 .profileDRContainer > i:hover {
     box-shadow: var(--default-shadow);
     scale: 1.03;
