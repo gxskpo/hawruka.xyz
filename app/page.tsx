@@ -21,8 +21,8 @@ export default function Home() {
                     <SocialButton icon={"fab fa-twitter"} url={"https://twitter.com/gxskpo"}/>
                     <SocialButton icon={"fab fa-github"} url={"https://github.com/gxskpo"}/>
                     <SocialButton icon={"fab fa-discord"} url={"https://discord.gg/NZCeaKzwaY"}/>
-                    <SocialButton icon={"fab fa-instagram"} url={"https://instagram.com/hawrukadev"}/>
                     <SocialButton icon={"fas fa-donate"} url={"/donate"}/>
+                    <SocialButton icon={"fab fa-instagram"} url={"https://instagram.com/hawrukadev"}/>
                 </div>
                 <ProfileRow description="Languages:" icons={[
                     {name: "javascript", color: "#f7df1e", nick: "JavaScript"},
@@ -91,6 +91,15 @@ export default function Home() {
                                         {className: "devicon-flask-original"},
                                         {className: "devicon-sqlite-plain"}
                                     ]} openSource={true}/>
+                    <h2>Projects I contributed to:</h2>
+                    <ProjectElement url="https://github.com/KuroCat56/SatanyaBot" imageUrl="/satanya.png"
+                                    projectName="SatanyaBot"
+                                    description="Open source discord bot"
+                                    useIcons={[
+                                        {className: "fab fa-discord"},
+                                        {className: "devicon-python-plain"},
+                                    ]} openSource={true}/>
+
                 </div>
             </div>
         </div>
