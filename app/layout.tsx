@@ -23,6 +23,8 @@ export const metadata: Metadata = {
             {
                 url: 'https://harukadev.xyz/pfp.png',
                 alt: 'Haruka',
+                width: 100,
+                height: 100
             },
         ],
     },
