@@ -155,6 +155,7 @@
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
+
 .profileDRContainer > a > i:hover,
 .profileDRContainer > i:hover {
     box-shadow: var(--default-shadow);
@@ -313,7 +314,7 @@
     }
 
 
-    .socialsContainer > a{
+    .socialsContainer > a {
         margin: 2px 5px;
         font-size: 1.2rem;
     }
@@ -322,7 +323,8 @@
         margin-left: 0;
         box-shadow: none;
     }
-    .myDataContainer > h2{
+
+    .myDataContainer > h2 {
         text-shadow: var(--default-shadow);
     }
 
@@ -350,7 +352,7 @@
         margin-bottom: 2vh;
     }
 
-    .projectsTitle > h2{
+    .projectsTitle > h2 {
         text-shadow: var(--default-shadow)
     }
 
@@ -366,6 +368,7 @@
         align-items: center; /* Centers items along the column axis */
         box-shadow: 0 10px 10px -10px rgba(255, 255, 255, 0.44);
         z-index: 1;
+        grid-gap: 1rem;
     }
 
     .projects > h2 {
@@ -373,14 +376,24 @@
         text-shadow: var(--default-shadow);
     }
 
-        .projects > a {
+    .projects > a {
         box-shadow: none;
         margin: auto; /* Centers the item within its container */
         width: 88%;
-        height: 25vh;
+        height:auto;
         /* If necessary, control the height of individual items */
-        min-height: 1rem;
+        min-height: 20vh;
     }
+    .projectData > p{
+        text-shadow: none;
+    }
+    .project > img{
+        box-shadow: none;
+    }
+    .projects > .projectData > h3{
+        text-shadow: none;
+    }
+
 
     .projects > a:last-of-type {
         margin-bottom: 1.5vw;
