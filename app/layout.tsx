@@ -5,26 +5,35 @@ import {Analytics} from '@vercel/analytics/react';
 import {GenericModal} from "./components/genericModal";
 
 export const metadata: Metadata = {
-    title: 'Harukadev.xyz',
+    title: {
+        template: '%s | Harukadev.xyz',
+        default: 'Harukadev.xyz',
+    },
+    metadataBase: new URL('https://harukadev.xyz/'),
     description: 'Holii, soy Haruka, A veces programo cosas\n No soy Hayami lpm',
+    keywords: ['Haruka', 'HarukaDev', "Developer", "Python", "JavaScript", "TypeScript"],
+    authors: [{name: 'Haruka'}],
+    publisher: 'Haruka',
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://harukadev.xyz',
+        siteName: 'Harukadev.xyz',
+        images: [
+            {
+                url: 'https://harukadev.xyz/pfp.png',
+                width: 800,
+                height: 600,
+                alt: 'Haruka',
+            },
+        ],
+    },
 }
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
         <head>
-            {/* @ts-ignore */}
-            <title>{metadata.title}</title>
-            <meta charSet="utf-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <meta name="theme-color" content="#000000"/>
-            {/* @ts-ignore */}
-            <meta property="og:title" content={metadata.title}/>
-            {/* @ts-ignore */}
-            <meta property="og:description" content={metadata.description}/>
-            <meta property="og:type" content="website"/>
-            <meta property="og:url" content="https://harukadev.xyz"/>
-            <meta property="og:image" content="/pfp.png"/>
             <link href={"https://fonts.googleapis.com/"} rel="preconnect"/>
             <script src={"https://kit.fontawesome.com/8e4c18f6c2.js"} crossOrigin="anonymous"/>
             <link rel="stylesheet" href={"https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"}/>
