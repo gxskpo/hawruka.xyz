@@ -322,6 +322,9 @@
         margin-left: 0;
         box-shadow: none;
     }
+    .myDataContainer > h2{
+        text-shadow: var(--default-shadow);
+    }
 
     .socialsContainer {
         margin-left: 0;
@@ -347,6 +350,10 @@
         margin-bottom: 2vh;
     }
 
+    .projectsTitle > h2{
+        text-shadow: var(--default-shadow)
+    }
+
     .projects {
         display: grid;
         grid-template-columns: 1fr;
@@ -360,8 +367,10 @@
         box-shadow: 0 10px 10px -10px rgba(255, 255, 255, 0.44);
         z-index: 1;
     }
+
     .projects > h2 {
         grid-column: span 1;
+        text-shadow: var(--default-shadow);
     }
 
         .projects > a {
