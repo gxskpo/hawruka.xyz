@@ -28,6 +28,9 @@ export const metadata: Metadata = {
             },
         ],
     },
+    twitter: {
+        card: "summary",
+    }
 }
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
