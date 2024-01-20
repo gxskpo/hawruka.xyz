@@ -44,7 +44,7 @@
     font-weight: 600;
     color: var(--black);
     text-shadow: var(--text-shadow);
-    display: inline;
+    display: block;
 }
 
 .myDataContainer img {
@@ -59,6 +59,7 @@
     box-shadow: var(--hover-shadow);
     scale: 1.01;
 }
+
 
 .socialsContainer {
     /* align to left */
@@ -368,7 +369,7 @@
         align-items: center; /* Centers items along the column axis */
         box-shadow: 0 10px 10px -10px rgba(255, 255, 255, 0.44);
         z-index: 1;
-        grid-gap: 1rem;
+        grid-gap: 2vh;
     }
 
     .projects > h2 {
@@ -398,6 +399,13 @@
     .projects > a:last-of-type {
         margin-bottom: 1.5vw;
         height: 27vh;
+    }
+
+}
+
+@media only screen and (max-height: 667px){
+    .projects{
+        grid-gap: 10vh;
     }
 
 }

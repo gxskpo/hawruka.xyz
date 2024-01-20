@@ -6,7 +6,6 @@ import {showModal} from "@/app/components/genericModal";
 import SocialButton from "@/app/components/socialButton";
 
 export default function Home() {
-
     return (
         <div className={styles.indexLayout}>
             <div className={styles.profileContainer}>
@@ -16,6 +15,11 @@ export default function Home() {
                     alt="Haruka"/>
                     <h1>Haruka</h1>
                 </span>
+                {/* <ProfileRow description="Prompt Engineer" icons={[
+                    {name: "", color: "#fff"}
+                ]} callback={() => {
+                    showModal("Just kidding", '', 'fa-solid fa-worm')
+                }}/> */}
                 <div className={styles.socialsContainer}>
                     <p>Socials:</p>
                     <SocialButton icon={"fab fa-twitter"} url={"https://twitter.com/gxskpo"}/>
@@ -47,14 +51,14 @@ export default function Home() {
                 ]} callback={(i) => {
                     showModal(i.nick ?? i.name, '', `devicon-${i.name}-plain`);
                 }}/>
-                    <div className={styles.profileDataRow}>
-                        <p>Source code of this website:</p>
-                        <div className={styles.profileDRContainer}>
-                            <a href="https://github.com/gxskpo/myWeb" target="_blank" rel="noreferrer">
-                                <i className="fab fa-github" style={{color: "#fff"}}/>
-                            </a>
-                        </div>
+                <div className={styles.profileDataRow}>
+                    <p>Source code of this website:</p>
+                    <div className={styles.profileDRContainer}>
+                        <a href="https://github.com/gxskpo/myWeb" target="_blank" rel="noreferrer">
+                            <i className="fab fa-github" style={{color: "#fff"}}/>
+                        </a>
                     </div>
+                </div>
             </div>
             <div className={styles.projectsContainer}>
                 <div className={styles.projectsTitle}>
