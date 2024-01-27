@@ -74,17 +74,15 @@ export default function Home() {
                     <ProjectElement url="https://github.com/gxskpo/sunburst" imageUrl="/sunburst-next.png"
                                     projectName="SunBurst (webpage)" description="SunBurst's webpage"
                                     useIcons={[
-                                        {className: "devicon-nodejs-plain"},
                                         {className: "devicon-nextjs-original"},
                                         {className: "devicon-typescript-plain"},
                                         {className: "devicon-tailwindcss-plain"}
                                     ]} openSource={true}/>
-                    <ProjectElement url="https://github.com/gxskpo/hayami" imageUrl="/hayami_icn_mini.png"
-                                    projectName="Hayami Bot" description="The useless discord bot"
+                    <ProjectElement url="https://github.com/gxskpo/hayami" imageUrl="/meowybot.webp"
+                                    projectName="MeowyBot" description="Bot de discord interactivo impulsado por GPT-4 Turbo"
                                     useIcons={[
                                         {className: "fab fa-discord"},
                                         {className: "devicon-python-plain"},
-                                        {className: "devicon-sqlite-plain"}
                                     ]} openSource={true}/>
 
                     <ProjectElement url="https://github.com/gxskpo/journal" imageUrl="/absdDefACL.png"
