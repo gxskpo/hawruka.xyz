@@ -3,14 +3,14 @@ import "../globals.css";
 
 export function showModal(title: string, content?: string, icon?: any) {
     const modal: any = document.querySelector(".generic-modal-container");
-    if(!modal) return;
+    if (!modal) return;
     const titleElem: any = document.querySelector("#generic-modal-title");
     const iconElem: any = document.querySelector("#generic-modal-icon");
     const contentElem: any = document.querySelector("#generic-modal-content");
 
     titleElem.innerText = title;
     contentElem.innerText = content ?? "";
-    if(icon){
+    if (icon) {
         iconElem.className = `${icon} generic-modal-icon`
     } else {
         iconElem.style.display = "none";
@@ -18,13 +18,13 @@ export function showModal(title: string, content?: string, icon?: any) {
     modal.style.display = "flex"
 }
 
-export async function waitForModalClose  (title: string, content?: string, icon?: any): Promise<void> {
+export async function waitForModalClose(title: string, content?: string, icon?: any): Promise<void> {
     const modal: any = document.querySelector(".generic-modal-container");
-    if(!modal) return;
+    if (!modal) return;
     showModal(title, content, icon);
     return new Promise((resolve, reject) => {
         const interval = setInterval(() => {
-            if(modal.style.display === "none"){
+            if (modal.style.display === "none") {
                 clearInterval(interval);
                 resolve();
             }
@@ -36,7 +36,7 @@ export function GenericModal() {
 
     const closeModal = () => {
         const modal: any = document.querySelector(".generic-modal-container");
-        if(!modal) return;
+        if (!modal) return;
         modal.style.display = "none";
     }
 

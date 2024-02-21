@@ -6,14 +6,11 @@ import {GenericModal} from "./components/genericModal";
 
 export const metadata: Metadata = {
     title: {
-        template: '%s | Harukadev.xyz',
-        default: 'Harukadev.xyz',
+        template: '%s | Harukadev',
+        default: 'Haruka Developer - Python & JS - I love .NET',
     },
     metadataBase: new URL('https://harukadev.xyz/'),
     description: 'Holii, soy Haruka, A veces programo cosas\n No soy Hayami lpm',
-    keywords: ['Haruka', 'HarukaDev', "Developer", "Python", "JavaScript", "TypeScript"],
-    authors: [{name: 'Haruka'}],
-    publisher: 'Haruka',
     openGraph: {
         type: 'website',
         locale: 'en_US',
@@ -37,7 +34,6 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
         <head>
-            <link href={"https://fonts.googleapis.com/"} rel="preconnect"/>
             <script src={"https://kit.fontawesome.com/8e4c18f6c2.js"} crossOrigin="anonymous"/>
             <link rel="stylesheet" href={"https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"}/>
         </head>

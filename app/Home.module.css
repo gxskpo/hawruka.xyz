@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    grid-template-columns: 1fr 6fr .1fr;
+    grid-template-columns: 2fr 5fr .1fr;
     top: 0;
     left: 0;
     overflow-x: hidden;
@@ -17,14 +17,15 @@
     display: flex;
     flex-direction: column;
     grid-column: 1;
-
+    gap: 1em;
+    position: sticky;
 }
 
 .myDataContainer {
     /* align to left */
     display: flex;
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     align-self: flex-start;
     justify-content: center;
@@ -61,38 +62,36 @@
 }
 
 
-.socialsContainer {
-    /* align to left */
+.dltCnt {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    align-self: flex-start;
-    justify-content: center;
-    background-color: var(--white);
-    border-radius: 10px;
-    padding: 12px;
-    box-shadow: var(--default-shadow);
-    margin-right: auto; /* Align to the left */
-    margin-top: 1.5vw;
-    transition: box-shadow 0.2s ease-in-out;
-    margin-left: 1.5vw;
-    width: 100%;
-    height: auto;
 }
 
-.socialsContainer > p {
+.dltCnt img {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+.sclContainer {
+    /* align to left */
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.sclContainer > p {
     margin: 0 10px;
-    padding: 5px 10px 5px 10px;
     border-radius: 10px;
+    padding: 5px 10px;
     color: var(--black);
     text-shadow: var(--hover-shadow);
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.socialsContainer > a {
+.sclContainer > a {
     margin: 0 10px;
+    padding: 5px 10px;
+    text-align: center;
     background-color: var(--grey);
-    padding: 5px 10px 5px 10px;
     border-radius: 10px;
     color: var(--black);
     font-size: 1.5rem;
@@ -100,11 +99,8 @@
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.socialsContainer > a:last-of-type {
-    padding: 5px 12px 5px 12px;
-}
 
-.socialsContainer > a:hover {
+.sclContainer > a:hover {
     box-shadow: var(--default-shadow);
     scale: 1.015;
 }
@@ -113,20 +109,19 @@
 .profileDataRow {
     /* align to left */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     align-self: flex-start;
     justify-content: center;
     background-color: var(--white);
     border-radius: 10px;
     padding: 12px;
-    box-shadow: var(--default-shadow);
+    box-shadow: var(--small-default-shadow);
     margin-right: auto; /* Align to the left */
     margin-top: 1.5vw;
     transition: box-shadow 0.2s ease-in-out;
     margin-left: 1.5vw;
     width: 100%;
-    height: auto;
 }
 
 .profileDataRow > .profileDRContainer {
@@ -136,7 +131,7 @@
 }
 
 .profileDataRow > p {
-    margin: 0 10px;
+    margin: 5px 10px;
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
     color: var(--black);
@@ -146,7 +141,7 @@
 
 .profileDRContainer > a > i,
 .profileDRContainer > i {
-    margin: 2px 10px;
+    margin: 6px 12px;
     background-color: var(--white);
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
@@ -205,7 +200,7 @@
 
 .projectsContainer .projectsTitle {
     @apply text-2xl font-semibold text-gray-700 self-center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: var(--black);
     text-shadow: var(--text-shadow);
@@ -340,7 +335,7 @@
     }
 
     .profileDRContainer > i {
-        padding: 8px 5px 5px 8px;
+        padding: 13px 13px;
     }
 
 
@@ -369,7 +364,10 @@
         align-items: center; /* Centers items along the column axis */
         box-shadow: 0 10px 10px -10px rgba(255, 255, 255, 0.44);
         z-index: 1;
-        grid-gap: 2vh;
+    }
+
+    .project{
+        top: 20rem;
     }
 
     .projects > h2 {

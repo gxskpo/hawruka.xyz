@@ -18,7 +18,7 @@ interface Props {
 export default function ProjectElement(props: Props): ReactNode {
     const openSourceIcon = () => {
         if (props.openSource) {
-            return <i className={`fas fa-code-fork ${styles.openSourceBadge}`} style={{color: "#e89b0f"}}
+            return <i className={`fas fa-code ${styles.openSourceBadge}`} style={{color: "#e89b0f"}}
                       id={styles.profileIcon}/>
         }
     }
@@ -35,7 +35,7 @@ export default function ProjectElement(props: Props): ReactNode {
 
     return (
         <a href={props.url}>
-            <div className={styles.project}>
+            <article className={styles.project}>
                 <img src={props.imageUrl} alt="Haruka"/>
                 <div className={styles.projectData}>
                     <h3>{props.projectName} {openSourceIcon()}</h3>
@@ -44,7 +44,7 @@ export default function ProjectElement(props: Props): ReactNode {
                 <div className={styles.languages}>
                     {iconsList}
                 </div>
-            </div>
+            </article>
         </a>
     )
 }

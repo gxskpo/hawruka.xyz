@@ -1,5 +1,5 @@
 import styles from '../Home.module.css';
-import {ReactNode} from "react";
+import React, {ReactNode} from "react";
 
 interface IconDict {
     name: string,
@@ -14,9 +14,21 @@ interface Props {
     callback?: (name: IconDict) => void;
 }
 
+interface ClickTarget extends EventTarget {
+    dataset: any
+}
+
+
 export default function ProfileRow(props: Props) {
-    const handleClick = (icon: IconDict) => {
-        if (props.callback) props.callback(icon);
+    const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        const target: ClickTarget = e.target as ClickTarget;
+        const iconName = target.dataset.name
+        const {icons} = props;
+        icons.map((icon) => {
+            if (icon.name === iconName) {
+                props.callback && props.callback(icon);
+            }
+        })
     }
 
     const {description, icons} = props;
@@ -26,15 +38,12 @@ export default function ProfileRow(props: Props) {
         const name = icon.name;
         const color = icon.color;
         iconsList.push(
-            <i className={`devicon-${name}-plain`} style={{color: color}} onClick={() => {
-                handleClick(icon)
-            }}/>
+            <i className={`devicon-${name}-plain`} style={{color: color}} data-name={name}/>
         )
     }
-
-
+    
     return (
-        <div className={styles.profileDataRow}>
+        <div className={styles.profileDataRow} onClick={handleClick}>
             <p>{description}</p>
             <div className={styles.profileDRContainer}>
                 {iconsList}

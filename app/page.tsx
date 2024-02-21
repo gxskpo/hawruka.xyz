@@ -7,45 +7,32 @@ import SocialButton from "@/app/components/socialButton";
 
 export default function Home() {
     return (
-        <div className={styles.indexLayout}>
-            <div className={styles.profileContainer}>
-                <span className={styles.myDataContainer}>
-                <img
-                    src="/pfp.png"
-                    alt="Haruka"/>
-                    <h1>Haruka</h1>
-                </span>
-                {/* <ProfileRow description="Prompt Engineer" icons={[
-                    {name: "", color: "#fff"}
-                ]} callback={() => {
-                    showModal("Just kidding", '', 'fa-solid fa-worm')
-                }}/> */}
-                <div className={styles.socialsContainer}>
-                    <p>Socials:</p>
-                    <SocialButton icon={"fab fa-twitter"} url={"https://twitter.com/gxskpo"}/>
-                    <SocialButton icon={"fab fa-github"} url={"https://github.com/gxskpo"}/>
-                    <SocialButton icon={"fab fa-discord"} url={"https://discord.gg/NZCeaKzwaY"}/>
-                    <SocialButton icon={"fas fa-donate"} url={"/donate"}/>
-                    <SocialButton icon={"fab fa-instagram"} url={"https://instagram.com/hawrukadev"}/>
+        <main className={styles.indexLayout}>
+            <section className={styles.profileContainer}>
+                <div className={styles.myDataContainer}>
+                    <div className={styles.dltCnt}>
+                        <img
+                            src="/pfp.png"
+                            alt="Haruka"/>
+                        <h1>Haruka</h1>
+                    </div>
+                    <div className={styles.sclContainer}>
+                        <SocialButton icon={"fab fa-twitter"} url={"https://twitter.com/gxskpo"}/>
+                        <SocialButton icon={"fab fa-github"} url={"https://github.com/gxskpo"}/>
+                        <SocialButton icon={"fab fa-discord"} url={"https://discord.gg/NZCeaKzwaY"}/>
+                        <SocialButton icon={"fas fa-donate"} url={"/donate"}/>
+                        <SocialButton icon={"fab fa-instagram"} url={"https://instagram.com/hawrukadev"}/>
+                    </div>
                 </div>
-                <ProfileRow description="Languages:" icons={[
+                <ProfileRow description="My skills" icons={[
                     {name: "javascript", color: "#f7df1e", nick: "JavaScript"},
                     {name: "typescript", color: "#007acc", nick: "TypeScript"},
                     {name: "python", color: "#4B8BBE", nick: "Python"},
                     {name: "csharp", color: "#239120", nick: "C#"},
-                ]} callback={(i) => {
-                    showModal(i.nick ?? i.name, '', `devicon-${i.name}-plain`);
-                }}
-                />
-                <ProfileRow description="Techs:" icons={[
                     {name: "react", color: "#61dbfb", nick: "React"},
                     {name: "nextjs", color: "#000000", nick: "Next.js"},
                     {name: "nodejs", color: "#339933", nick: "Node.js"},
-                    {name: "dotnetcore", color: "#512bd4", nick: ".NET Core"},
-                ]} callback={(i) => {
-                    showModal(i.nick ?? i.name, '', `devicon-${i.name}-plain`);
-                }}/>
-                <ProfileRow description="DBs:" icons={[
+                    {name: "dotnetcore", color: "#fff", nick: ".NET Core"},
                     {name: "sqlite", color: "#fff", nick: "SQLite"},
                     {name: "mysql", color: "#4DB33D", nick: "MySQL"},
                 ]} callback={(i) => {
@@ -54,13 +41,15 @@ export default function Home() {
                 <div className={styles.profileDataRow}>
                     <p>Source code of this website:</p>
                     <div className={styles.profileDRContainer}>
-                        <a href="https://github.com/gxskpo/myWeb" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/gxskpo/myWeb" target="_blank" rel="noreferrer" style={{
+                            gridColumn: "span 5"
+                        }}>
                             <i className="fab fa-github" style={{color: "#fff"}}/>
                         </a>
                     </div>
                 </div>
-            </div>
-            <div className={styles.projectsContainer}>
+            </section>
+            <section className={styles.projectsContainer}>
                 <div className={styles.projectsTitle}>
                     <h2>My projects ^^</h2>
                 </div>
@@ -79,7 +68,8 @@ export default function Home() {
                                         {className: "devicon-tailwindcss-plain"}
                                     ]} openSource={true}/>
                     <ProjectElement url="https://github.com/gxskpo/hayami" imageUrl="/meowybot.webp"
-                                    projectName="MeowyBot" description="Bot de discord interactivo impulsado por GPT-4 Turbo"
+                                    projectName="MeowyBot"
+                                    description="Bot de discord interactivo impulsado por GPT-4 Turbo"
                                     useIcons={[
                                         {className: "fab fa-discord"},
                                         {className: "devicon-python-plain"},
@@ -93,7 +83,9 @@ export default function Home() {
                                         {className: "devicon-flask-original"},
                                         {className: "devicon-sqlite-plain"}
                                     ]} openSource={true}/>
-                    <h2>Projects I contributed to:</h2>
+                    <h2 style={{
+                        color: "#adadad"
+                    }}>Projects I contributed to:</h2>
                     <ProjectElement url="https://github.com/KuroCat56/SatanyaBot" imageUrl="/satanya.png"
                                     projectName="SatanyaBot"
                                     description="Open source discord bot"
@@ -101,9 +93,8 @@ export default function Home() {
                                         {className: "fab fa-discord"},
                                         {className: "devicon-python-plain"},
                                     ]} openSource={true}/>
-
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
     )
 }
